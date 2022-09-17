@@ -1,0 +1,201 @@
+/* Reset css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+/* configurando o corpo do html*/
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+    
+}
+
+/* Reset body */
+body * {
+font-family:'inter', sans-serif ;
+line-height:  160%;
+}
+
+ /* configurando o header img para o centro da pagina no html*/
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);
+    
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg,#fc8272 0%,  #c99af1 50.52%, #87b4ec 100%);
+
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+
+    transition: transform .3s;
+}
+
+/* configurando transição do header*/
+ header div:hover{
+transform: scale(1.1);
+ }
+
+ /* configurando o tamanho do header img na pagina do html*/
+ header div img {
+    width: 100%;
+    border-radius: 50%;
+    
+ }
+
+/* configurando o main*/
+main {
+    max-width: 580;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid ;
+    gap: 24px;
+
+    margin-top: 32px;
+}
+
+/* configurando a section   background-image: linear-gradient(90deg,#9572FC 0%,  #43E7AD 50.52%, #E2D45C 100%);*/
+section {
+   color:white;
+  background-image: linear-gradient(90deg,#fc7272 0%,  #9043e7 50.52%, #5ccee2 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+
+section div{
+    background-color: #2a2634;
+    padding: 32px; 
+    padding-top: 24px;
+    border-radius: 8px;
+    
+}
+
+/* configurando o h2 da section */
+section h2 {   
+  letter-spacing: -0.47px;
+}
+
+/* configurando a p da section */
+section p {
+letter-spacing: -0.18px;
+color: #A1A1AA;
+}
+
+/* configurando a display */ 
+section ul {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 16px;
+ margin-top: 24px;
+ transition: transform .3s;
+}
+
+section ul {
+    transition: transform .3s;
+}
+
+section ul li:hover{
+   transform: scale(1.1); 
+}
+
+.filmes-list img {
+ width: 100%; 
+ border-radius: 10px;
+ border: 2px solid #443E54;
+}
+
+.série-list img {
+border-radius: 10px;
+width:100%;
+border: 2px solid #443E54;
+}
+
+/* Animação css*/
+
+header div {
+    animation: fromTop .7s .2s backwards;
+   
+}
+
+main section {
+    animation: fromTop .7s backwards;
+   
+}
+main section:nth-child(1) {
+    animation-delay: 0;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+/* Animação do eixo Y */
+@keyframes fromTop {
+   from{
+    opacity: 0;
+    transform: translateY(-30px)
+   }
+   
+   to{
+    opacity: 1;
+    transform: translateY(0);
+   }
+} 
+
+  @keyframes fromBottom {
+    from {
+     opacity: 0;
+     transform: translateY(-30px)
+    }
+    
+    to {
+     opacity: 1;
+     transform: translateY(0)
+    }
+ 
+ }
+
+ /* Animação do eixo x
+@keyframes fromTop {
+   from{
+    opacity: 0;
+    transform: translateX(-30px)
+   }
+   
+   to{
+    opacity: 1;
+    transform: translateX(0);
+   }
+} 
+
+@keyframes fromBottom {
+    from {
+     opacity: 0;
+     transform: translateX(-30px)
+    }
+    
+    to {
+     opacity: 1;
+     transform: translateX(0)
+    }
+ 
+ }*/
